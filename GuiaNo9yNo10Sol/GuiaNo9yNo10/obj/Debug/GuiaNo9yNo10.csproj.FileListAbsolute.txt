@@ -1,1 +1,7 @@
 D:\RR20044-DR18013GuiaNo9y10\Prueba\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.exe.config
+D:\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.exe.config
+D:\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.exe
+D:\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.pdb
+D:\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.csprojResolveAssemblyReference.cache
+D:\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.exe
+D:\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.pdb
