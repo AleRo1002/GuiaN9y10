@@ -37,11 +37,9 @@ namespace GuiaNo9yNo10
                     case 4: //Ver listado
                         if (cantPersonas >= 1)
                         {
-<<<<<<< HEAD
-                            VerListado(nombres, edades, esPeSa);
-=======
+
                             VerListado(nombres, edades, esPeSa,cantPersonas);
->>>>>>> ProbandoCambios
+
                         }
                         else
                         {
@@ -50,10 +48,6 @@ namespace GuiaNo9yNo10
                             Console.WriteLine("\n\t\t ...Intente ingresando datos. ");
                         }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ProbandoCambios
                         break;
                     case 5: //Ver estadísticas
                         if (cantPersonas >= 1)
@@ -145,11 +139,9 @@ namespace GuiaNo9yNo10
 
         }
         //////////////////////////////inializar valores///////////////////////////////////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
-        public static void VerListado(String[] nombre, int[] edad, double[,] esPeSa)
-=======
+
         public static void VerListado(String[] nombre, int[] edad, double[,] esPeSa,int cantPersonas)
->>>>>>> ProbandoCambios
+
         {
 
             Console.WriteLine("Nombres\t\t Edades\t\t Estatura\t  Peso\t\t Salario\t\t");
