@@ -8,10 +8,7 @@ namespace GuiaNo9yNo10
 {
     class Program
     {
-        const int TAM = 7, FILAS = 7, COLUMNAS = 3;
-
-
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             /////////////////////////////////////Vectores de programa
             String[] nombres = new String[7];
@@ -28,16 +25,39 @@ namespace GuiaNo9yNo10
                 {
                     case 1: //Inicializar vectores
                         IncilizarValores(nombres, edades, esPeSa);
+                        cantPersonas = 5;
                         break;
                     case 2: //Limpiar memoria
                         LimpiezaMemoria(nombres, edades, esPeSa);
+                        cantPersonas = 0;
                         break;
                     case 3: //Ingresar datos
                         break;
                     case 4: //Ver listado
-                        VerListado(nombres, edades, esPeSa);
+                        if (cantPersonas >= 1)
+                        {
+                            VerListado(nombres, edades, esPeSa);
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\t\t ...No se han encontrado datos. ");
+                            Console.WriteLine("\n\t\t ...Intente ingresando datos. ");
+                        }
+
+
                         break;
                     case 5: //Ver estadísticas
+                        if (cantPersonas >= 1)
+                        {
+                            // VerListado(nombres,edades,esPeSa);//
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\t\t ...No se han encontrado . ");
+                            Console.WriteLine("\n\t\t ...Intente ingresando datos. ");
+                        }
                         break;
                     case 6: //Salir
                         continuar = false;
@@ -89,6 +109,8 @@ namespace GuiaNo9yNo10
                     esPeSa[j, x] = 0;
                 }
             }
+            Console.Clear();
+            Console.WriteLine("\n\t\t ...Se ha limpiado la memoria. ");
         }//LimpiezaMemoria
          ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public static void IncilizarValores(String[] nombre, int[] edad, double[,] esPeSa)
@@ -110,9 +132,11 @@ namespace GuiaNo9yNo10
                     esPeSa[j, x] = carEsPeSa[j, x];
                 }
             }
+            Console.Clear();
+            Console.WriteLine("\n\t\t ...Vectores inicializados. ");
 
         }
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////inializar valores///////////////////////////////////////////////////////////////////////////////////////////////////////
         public static void VerListado(String[] nombre, int[] edad, double[,] esPeSa)
         {
 
@@ -121,6 +145,7 @@ namespace GuiaNo9yNo10
             {
                 Console.WriteLine("{0}\t\t   {1}\t\t   {2}\t\t  {3}\t\t {4}\t\t", nombre[z], edad[z], esPeSa[z, 0], esPeSa[z, 1], esPeSa[z, 2]);
             }
+
         }
     }
 }
