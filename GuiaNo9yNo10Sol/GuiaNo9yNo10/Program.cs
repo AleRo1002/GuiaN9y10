@@ -36,11 +36,8 @@ namespace GuiaNo9yNo10
                         break;
                     case 4: //Ver listado
                         if (cantPersonas >= 1)
-                        {
-
-                            VerListado(nombres, edades, esPeSa,cantPersonas);
-
-                        }
+                            VerListado(nombres, edades, esPeSa, cantPersonas);
+                        
                         else
                         {
                             Console.Clear();
@@ -51,9 +48,8 @@ namespace GuiaNo9yNo10
                         break;
                     case 5: //Ver estadísticas
                         if (cantPersonas >= 1)
-                        {
-                            // VerListado(nombres,edades,esPeSa);//
-                        }
+                            Estadisticas(nombres, edades, esPeSa);
+                        
                         else
                         {
                             Console.Clear();
@@ -140,12 +136,12 @@ namespace GuiaNo9yNo10
         }
         //////////////////////////////inializar valores///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public static void VerListado(String[] nombre, int[] edad, double[,] esPeSa,int cantPersonas)
+        public static void VerListado(String[] nombre, int[] edad, double[,] esPeSa, int cantPersonas)
 
         {
 
             Console.WriteLine("Nombres\t\t Edades\t\t Estatura\t  Peso\t\t Salario\t\t");
-            for (int z = 0; z < cantPersonas ; z++)
+            for (int z = 0; z < cantPersonas; z++)
             {
                 Console.WriteLine("{0}\t\t   {1}\t\t   {2}\t\t  {3}\t\t {4}\t\t", nombre[z], edad[z], esPeSa[z, 0], esPeSa[z, 1], esPeSa[z, 2]);
             }
@@ -163,7 +159,7 @@ namespace GuiaNo9yNo10
                 {
                     Console.WriteLine(" Ingrese el nombre:");
                     nombre[i] = Console.ReadLine();
-                    Console.WriteLine(" Ingrese la edad:" );
+                    Console.WriteLine(" Ingrese la edad:");
                     edad[i] = int.Parse(Console.ReadLine());
                 }
 
@@ -171,20 +167,13 @@ namespace GuiaNo9yNo10
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (x == 0)
-                        {
-                            Console.WriteLine(" Ingrese la estatura (metros):");
-                        }
+                        if (x == 0) Console.WriteLine(" Ingrese la estatura (metros):");
+
                         else
                         {
-                            if (x == 1)
-                            {
-                                Console.WriteLine(" Ingrese el peso en (lbs):");
-                            }
-                            else
-                            {
-                                Console.WriteLine(" Ingrese el salario (dolares):");
-                            }
+                            if (x == 1) Console.WriteLine(" Ingrese el peso en (lbs):");
+
+                            else Console.WriteLine(" Ingrese el salario (dolares):");
                         }
                         esPeSa[j, x] = double.Parse(Console.ReadLine());
                     }
@@ -200,6 +189,24 @@ namespace GuiaNo9yNo10
             }
             //////////////////////////////////////////////////////////////////
 
+        }
+
+        public static void Estadisticas(String[] nombre, int[] edad, double[,] esPeSa)
+        {
+            int  total = 0,numeroElementos = 0;
+            double promedioEdad = 0;
+
+            foreach (int elementos in edad) total += elementos;
+            numeroElementos = edad.Length;
+
+            promedioEdad = total / numeroElementos;
+
+            Console.WriteLine("\n Edad promedio: {0}", Math.Round(promedioEdad, 2));
+            Console.WriteLine(" Nombres\t Edades\t");
+
+            for (int i = 0; i < edad.Length;i++)
+                if (edad[i] < Math.Round(promedioEdad,2) && edad[i] != 0) Console.WriteLine(" {0}\t\t {1}", nombre[i], edad[i]);               
+       
         }
     }
 }

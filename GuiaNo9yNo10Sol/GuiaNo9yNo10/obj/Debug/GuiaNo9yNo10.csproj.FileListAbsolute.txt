@@ -13,9 +13,4 @@ C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\G
 C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.pdb
 C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.csprojResolveAssemblyReference.cache
 =======
-C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.exe
-C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\bin\Debug\GuiaNo9yNo10.pdb
-C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.csprojResolveAssemblyReference.cache
-C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.exe
-C:\Users\manrico3a630\Documents\Visual Studio 2015\Projects\Guia9y10\GuiaN9y10\GuiaNo9yNo10Sol\GuiaNo9yNo10\obj\Debug\GuiaNo9yNo10.pdb
 >>>>>>> ProbandoCambios
