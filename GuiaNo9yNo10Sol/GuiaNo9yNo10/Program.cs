@@ -116,7 +116,7 @@ namespace GuiaNo9yNo10
             //Vectores para incilizar
             String[] cargarNombres = { "Carlos", "Mario", "Jose", "Manuel", "Juan" };
             int[] cargarEdades = { 23, 11, 24, 56, 34 };
-            double[,] carEsPeSa = new double[5, 3] { { 1.8, 230, 449 }, { 1.6, 132, 1000.00 }, { 2.3, 134, 150.78 }, { 1.60, 4500, 2.09 }, { 2.0, 80.8, 600.9 } };
+            double[,] carEsPeSa = new double[5, 3] { { 1.8, 230, 449 }, { 1.6, 132, 1500.00 }, { 2.3, 134, 150.78 }, { 1.60, 4500, 2.09 }, { 2.0, 80.8, 600.9 } };
 
             for (int w = 0; w < 5; w++)
             {
@@ -193,20 +193,46 @@ namespace GuiaNo9yNo10
 
         public static void Estadisticas(String[] nombre, int[] edad, double[,] esPeSa)
         {
-            int  total = 0,numeroElementos = 0;
-            double promedioEdad = 0;
+            int  total = 0,numeroElementos = 0,limitePeso = 200,limiteSalario = 1000;
+            double promedioEdad = 0,limiteDeAltura = 1.65;
 
-            foreach (int elementos in edad) total += elementos;
+            foreach (int elementos in edad)
+                total += elementos;
+
             numeroElementos = edad.Length;
 
             promedioEdad = total / numeroElementos;
 
             Console.WriteLine("\n Edad promedio: {0}", Math.Round(promedioEdad, 2));
-            Console.WriteLine(" Nombres\t Edades\t");
+            Console.WriteLine("\n personas con edad menor al promedio ");
+            Console.WriteLine("\n Nombres\t Edades\t");
 
             for (int i = 0; i < edad.Length;i++)
-                if (edad[i] < Math.Round(promedioEdad,2) && edad[i] != 0) Console.WriteLine(" {0}\t\t {1}", nombre[i], edad[i]);               
-       
+                if(edad[i] < Math.Round(promedioEdad,2) && edad[i] != 0)
+                    Console.WriteLine(" {0}\t\t {1}", nombre[i], edad[i]);
+
+            Console.WriteLine("\n Datos de personas con altura menor a {0}m ",limiteDeAltura);
+            Console.WriteLine("\nNombres\t\t Edades\t\t Estatura\t  Peso\t\t Salario\t\t");
+
+            for (int z = 0; z < 7 ; z++)
+                if(esPeSa[z,0] < limiteDeAltura && esPeSa[z,0] != 0)
+                    Console.WriteLine(" {0}\t\t   {1}\t\t   {2}\t\t  {3}\t\t {4}\t\t", nombre[z], edad[z], esPeSa[z, 0], esPeSa[z, 1], esPeSa[z, 2]);
+
+            Console.WriteLine("\n personas con peso mayor a {0}lbs ",limitePeso);
+            Console.WriteLine("\n Nombres\t  Pesos\t");
+
+            for (int x = 0; x < 7; x++)
+                if (esPeSa[x, 1] >= limitePeso && esPeSa[x, 1] != 0)
+                    Console.WriteLine(" {0}\t\t   {1}\t\t ", nombre[x],esPeSa[x, 1]);
+
+
+            Console.WriteLine("\n personas con un salario mayor ${0} ",limiteSalario);
+            Console.WriteLine("\n Nombres\t Salarios\t");
+
+            for (int y = 0; y < 7; y++)
+                if (esPeSa[y, 2] > limiteSalario && esPeSa[y, 2] != 0)
+                    Console.WriteLine(" {0}\t\t   {1}\t\t ", nombre[y], esPeSa[y, 2]);
+
         }
     }
 }
